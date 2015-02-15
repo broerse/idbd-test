@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row">
+	  <!-- author listing -->
+		<div class="col-xs-5">
+		  <button {{action 'createAuthor'}}>Create</button>
+			<table class='table'>
+				<thead>
+					<tr><th>Authors</th></tr>
+				</thead>
+				<tbody>
+				{{#each author in model}}
+				<tr><td>
+					{{#link-to 'author' author}}
+						&bull; {{author.name}}
+					{{/link-to}}
+				</td></tr>
+				{{/each}}
+				</tbody>
+			</table>
+		</div>
+
+		<!-- author content -->
+		<div class="col-xs-7">
+			{{outlet}}
+		</div>
+	</div>	
+</div>
