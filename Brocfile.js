@@ -5,7 +5,14 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 var app = new EmberApp({
   vendorFiles: {
     'handlebars.js': null
-  }
+  },
+  minifyCSS: {
+    enabled: false
+  },
+  minifyJS: {
+    enabled: false
+  },
+  wrapInEval: false
 });
 
 app.import('bower_components/bootstrap/dist/css/bootstrap.css');
